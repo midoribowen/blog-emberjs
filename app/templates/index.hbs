@@ -2,7 +2,7 @@
 <!-- model.post didn't work - only one object/model, so no need to specify "model.post" -->
   {{#each model as |post|}}
     <div class="col-md-12">
-      {{post-tile post=post}}
+      {{post-tile post=post destroyPost="destroyPost"}}
     </div>
     <hr>
   {{/each}}
