@@ -4,5 +4,12 @@
       <h2>{{post.title}}</h2>
       <h4>{{moment-format post.timestamp}}</h4>
     </div>
+    <div class="col-md-12 full-post-content">
+      <p>{{post.content}}</p>
+    </div>
   </div>
 </div>
+
+{{update-post post=post update="update"}}
+
+ <button {{action 'delete' post}}>Delete</button>
