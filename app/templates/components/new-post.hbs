@@ -1,0 +1,15 @@
+<h1>New Post</h1>
+    <div class="row">
+      <form class="col-md-6 col-center">
+        <div class="form-group">
+          <label for="title">Title</label>
+          {{input class="form-control" value=title id="title"}}
+        </div>
+        <div class="form-group">
+          <label for="content">Content</label>
+          {{textarea class="form-control" value=content id="content"}}
+        </div>
+
+        <button {{action 'savePost'}}>Save</button>
+      </form>
+    </div>

@@ -1,0 +1,14 @@
+<div class="row">
+<!-- model.post didn't work - only one object/model, so no need to specify "model.post" -->
+  {{#each model as |post|}}
+    <div class="col-md-12">
+      <a href="post/{{post.id}}"></a>
+      {{post-tile post=post}}
+    </div>
+    <hr>
+  {{/each}}
+</div>
+
+<div class="container">
+  <a href="/new-post">Add a new blog post</a>
+</div>
