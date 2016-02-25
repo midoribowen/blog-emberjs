@@ -24,7 +24,7 @@
   <div class="row comments">
     {{new-comment post=post saveComment="saveComment"}}
     <h2>Comments:</h2>
-      {{#each post.comments as |comment|}}
+      {{#each sortedComments as |comment|}}
       <div class="col-md-12 comment">
         <p><strong>Author: {{comment.author}}</strong></p>
         <p>Posted: {{moment-from-now comment.timestamp}}</p>

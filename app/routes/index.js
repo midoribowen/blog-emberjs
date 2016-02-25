@@ -3,7 +3,8 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model() {
     return this.store.findAll('post').then(function(posts) {
-      return posts.sortBy('timestamp').reverse();
+      return posts.sortBy('timestamp').reverse().slice(0,5);
     });
   },
+
 });

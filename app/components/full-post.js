@@ -1,6 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+
+  sortProperties: ['timestamp:desc'],
+  sortedComments: Ember.computed.sort('comments', 'sortProperties'),
+
   actions: {
     update(post, params) {
       this.sendAction('update', post, params);

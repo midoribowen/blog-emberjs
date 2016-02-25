@@ -3,11 +3,17 @@ img.header {
   width: 100%;
 }
 .navbar {
-  background-color: #375228;
+  background: linear-gradient(#375228, #54780d);
   border: 1px solid #70d651;
   .navbar-brand, #navbar-link {
     color: white;
     font-size: 22px;
+  }
+  .navbar-brand:hover {
+    color: #abdeae;
+  }
+  #navbar-link:hover {
+    color: #abdeae;
   }
 }
 
@@ -23,6 +29,14 @@ body {
     border-radius: 50px;
     border: none;
     box-shadow: none;
+  }
+  #post-link {
+    color: #412c1b;
+    text-decoration: none;
+  }
+  #post-link:hover {
+    color: #215425;
+    text-decoration: underline;
   }
   #new-post:link {
     font-size: 20px;
