@@ -5,9 +5,9 @@ export default Ember.Component.extend({
     update(post, params) {
       this.sendAction('update', post, params);
     },
-    delete(post) {
+    deletePost(post) {
       if (confirm('Are you sure you want to delete this post?')) {
-        this.sendAction('destroyPost', post);
+        this.sendAction('deletePost', post);
       }
     },
     saveComment(comment, params) {
@@ -18,7 +18,7 @@ export default Ember.Component.extend({
     },
     deleteComment(comment) {
       if (confirm('Are you sure you want to delete this comment?')) {
-        this.sendAction('destroyComment', comment);
+        this.sendAction('deleteComment', comment);
       }
     }
   }

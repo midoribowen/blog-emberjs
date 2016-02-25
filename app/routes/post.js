@@ -16,7 +16,7 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
 
-    destroyPost(post) {
+    deletePost(post) {
       post.destroyRecord();
       this.transitionTo('index');
     },
@@ -41,7 +41,7 @@ export default Ember.Route.extend({
       this.transitionTo('post', params.post);
     },
 
-    destroyComment(comment) {
+    deleteComment(comment) {
       comment.destroyRecord();
       this.transitionTo('post');
     },
