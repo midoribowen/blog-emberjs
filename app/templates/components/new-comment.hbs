@@ -1,0 +1,19 @@
+{{#if addNewRental}}
+<h1>New Comment</h1>
+    <div class="row">
+      <form class="col-md-6 col-center">
+        <div class="form-group">
+          <label for="title">Author</label>
+          {{input class="form-control" value=author id="author"}}
+        </div>
+        <div class="form-group">
+          <label for="content">Content</label>
+          {{textarea class="form-control" value=content id="content"}}
+        </div>
+
+        <button {{action 'saveComment'}}>Save</button>
+      </form>
+    </div>
+  {{else}}
+    <button {{action 'commentFormShow'}}>New Comment</button>
+{{/if}}
