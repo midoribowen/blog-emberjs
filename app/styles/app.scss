@@ -1,13 +1,19 @@
+img.header {
+  max-height: 480px;
+  width: 100%;
+}
 .navbar {
   background-color: #375228;
   border: 1px solid #70d651;
   .navbar-brand, #navbar-link {
     color: white;
+    font-size: 22px;
   }
 }
 
 body {
   font-family: 'Buda';
+  font-size: 20px;
   background-color: #97c181;
   color: #412c1b;
   button {
