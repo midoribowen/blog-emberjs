@@ -10,7 +10,6 @@ Router.map(function() {
   this.route('contact');
   this.route('new-post');
   this.route('post', {path: '/post/:post_id'});
-  this.route('new-comment');
 });
 
 export default Router;

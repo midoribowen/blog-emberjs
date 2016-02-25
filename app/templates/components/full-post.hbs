@@ -30,6 +30,9 @@
         <p>Posted: {{moment-from-now comment.timestamp}}</p>
         <p>"{{comment.content}}"</p>
         <br>
+        {{update-comment comment=comment post=post updateComment="updateComment"}}
+        <br>
+        <button {{action 'deleteComment' comment}}>Delete Comment</button>
         <hr>
       </div>
       {{/each}}

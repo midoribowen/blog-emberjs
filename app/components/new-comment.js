@@ -13,7 +13,6 @@ export default Ember.Component.extend({
         post: this.get('post'),
         timestamp: new Date().getTime(),
       };
-      console.log(params);
       this.set('commentFormShow', false);
       this.sendAction('saveComment', params);
     }
