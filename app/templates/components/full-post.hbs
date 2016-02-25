@@ -8,10 +8,30 @@
       <p>{{post.content}}</p>
     </div>
   </div>
+  <div class="row actions">
+    <div class="col-md-3">
+      <br>
+      <button {{action 'delete' post}}>Delete Post</button>
+    </div>
+    <div class="col-md-3">
+      <br>
+      {{update-post post=post update="update"}}
+    </div>
+  </div>
+  <br>
+  <br>
+  <hr>
+  <div class="row comments">
+    {{new-comment post=post saveComment="saveComment"}}
+    <h2>Comments:</h2>
+      {{#each post.comments as |comment|}}
+      <div class="col-md-12 comment">
+        <p><strong>Author: {{comment.author}}</strong></p>
+        <p>Posted: {{moment-from-now comment.timestamp}}</p>
+        <p>"{{comment.content}}"</p>
+        <br>
+        <hr>
+      </div>
+      {{/each}}
+  </div>
 </div>
-
-{{update-post post=post update="update"}}
-<br>
- <button {{action 'delete' post}}>Delete</button>
-<br>
-{{new-comment comment=comment saveComment="saveComment"}}
